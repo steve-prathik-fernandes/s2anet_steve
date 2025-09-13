@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python3
 """
 S2ANet Training Script with Your Dataset
@@ -13,7 +14,7 @@ import torch.nn as nn
 collections.Sequence = collections.abc.Sequence
 
 # Add current directory to path
-sys.path.insert(0, '/root/s2anet')
+sys.path.insert(0, '/root/s2anet_steve')
 
 from mmcv import Config
 from mmdet.datasets import build_dataset
@@ -25,11 +26,11 @@ def main():
     print("=" * 60)
     
     # Load config
-    config_file = '/root/s2anet/configs/dota/s2anet_r50_fpn_1x_dota_custom.py'
+    config_file = '/root/s2anet_steve/configs/dota/s2anet_r50_fpn_1x_dota_custom.py'
     cfg = Config.fromfile(config_file)
     
     # Set work directory
-    cfg.work_dir = '/root/s2anet/work_dirs/s2anet_r50_fpn_1x_dota_custom'
+    cfg.work_dir = '/root/s2anet_steve/work_dirs/s2anet_r50_fpn_1x_dota_custom'
     
     # Create work directory
     os.makedirs(cfg.work_dir, exist_ok=True)
